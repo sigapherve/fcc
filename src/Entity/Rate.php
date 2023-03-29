@@ -37,6 +37,11 @@ class Rate
      */
     private $date;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=UnitFact::class, inversedBy="rates")
+     */
+    private $UnitFact;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Rate
     public function setDate(?\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getUnitFact(): ?UnitFact
+    {
+        return $this->UnitFact;
+    }
+
+    public function setUnitFact(?UnitFact $UnitFact): self
+    {
+        $this->UnitFact = $UnitFact;
 
         return $this;
     }
