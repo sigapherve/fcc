@@ -34,9 +34,15 @@ class Country
      */
     private $checkouts;
 
+    /**
+     * @ORM\OneToMany(targetEntity=InvoicingMethod::class, mappedBy="Country")
+     */
+    private $invoicingMethods;
+
     public function __construct()
     {
         $this->checkouts = new ArrayCollection();
+        $this->invoicingMethods = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -92,6 +98,36 @@ class Country
             // set the owning side to null (unless already changed)
             if ($checkout->getShipto() === $this) {
                 $checkout->setShipto(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, InvoicingMethod>
+     */
+    public function getInvoicingMethods(): Collection
+    {
+        return $this->invoicingMethods;
+    }
+
+    public function addInvoicingMethod(InvoicingMethod $invoicingMethod): self
+    {
+        if (!$this->invoicingMethods->contains($invoicingMethod)) {
+            $this->invoicingMethods[] = $invoicingMethod;
+            $invoicingMethod->setCountry($this);
+        }
+
+        return $this;
+    }
+
+    public function removeInvoicingMethod(InvoicingMethod $invoicingMethod): self
+    {
+        if ($this->invoicingMethods->removeElement($invoicingMethod)) {
+            // set the owning side to null (unless already changed)
+            if ($invoicingMethod->getCountry() === $this) {
+                $invoicingMethod->setCountry(null);
             }
         }
 

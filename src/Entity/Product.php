@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProductRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,6 +48,16 @@ class Product
      * @ORM\Column(type="integer", nullable=true)
      */
     private $qty;
+
+    /**
+     * @ORM\OneToMany(targetEntity=InvoicingMethod::class, mappedBy="Product")
+     */
+    private $invoicingMethods;
+
+    public function __construct()
+    {
+        $this->invoicingMethods = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -120,6 +132,36 @@ class Product
     public function setQty(?int $qty): self
     {
         $this->qty = $qty;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, InvoicingMethod>
+     */
+    public function getInvoicingMethods(): Collection
+    {
+        return $this->invoicingMethods;
+    }
+
+    public function addInvoicingMethod(InvoicingMethod $invoicingMethod): self
+    {
+        if (!$this->invoicingMethods->contains($invoicingMethod)) {
+            $this->invoicingMethods[] = $invoicingMethod;
+            $invoicingMethod->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeInvoicingMethod(InvoicingMethod $invoicingMethod): self
+    {
+        if ($this->invoicingMethods->removeElement($invoicingMethod)) {
+            // set the owning side to null (unless already changed)
+            if ($invoicingMethod->getProduct() === $this) {
+                $invoicingMethod->setProduct(null);
+            }
+        }
 
         return $this;
     }
