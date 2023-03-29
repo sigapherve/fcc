@@ -54,9 +54,15 @@ class Product
      */
     private $invoicingMethods;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Constraints::class, mappedBy="product")
+     */
+    private $constraints;
+
     public function __construct()
     {
         $this->invoicingMethods = new ArrayCollection();
+        $this->constraints = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -161,6 +167,33 @@ class Product
             if ($invoicingMethod->getProduct() === $this) {
                 $invoicingMethod->setProduct(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Constraints>
+     */
+    public function getConstraints(): Collection
+    {
+        return $this->constraints;
+    }
+
+    public function addConstraint(Constraints $constraint): self
+    {
+        if (!$this->constraints->contains($constraint)) {
+            $this->constraints[] = $constraint;
+            $constraint->addProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeConstraint(Constraints $constraint): self
+    {
+        if ($this->constraints->removeElement($constraint)) {
+            $constraint->removeProduct($this);
         }
 
         return $this;

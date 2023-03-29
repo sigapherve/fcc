@@ -44,11 +44,17 @@ class Country
      */
     private $Paymentplace;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Constraints::class, mappedBy="Country")
+     */
+    private $constraints;
+
     public function __construct()
     {
         $this->checkouts = new ArrayCollection();
         $this->invoicingMethods = new ArrayCollection();
         $this->Paymentplace = new ArrayCollection();
+        $this->constraints = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -165,6 +171,33 @@ class Country
             if ($paymentplace->getCountry() === $this) {
                 $paymentplace->setCountry(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Constraints>
+     */
+    public function getConstraints(): Collection
+    {
+        return $this->constraints;
+    }
+
+    public function addConstraint(Constraints $constraint): self
+    {
+        if (!$this->constraints->contains($constraint)) {
+            $this->constraints[] = $constraint;
+            $constraint->addCountry($this);
+        }
+
+        return $this;
+    }
+
+    public function removeConstraint(Constraints $constraint): self
+    {
+        if ($this->constraints->removeElement($constraint)) {
+            $constraint->removeCountry($this);
         }
 
         return $this;
