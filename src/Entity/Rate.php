@@ -47,6 +47,11 @@ class Rate
      */
     private $PaymentPlace;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=ShipBy::class, inversedBy="rates")
+     */
+    private $shipby;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +125,18 @@ class Rate
     public function setPaymentPlace(?PaymentPlace $PaymentPlace): self
     {
         $this->PaymentPlace = $PaymentPlace;
+
+        return $this;
+    }
+
+    public function getShipby(): ?ShipBy
+    {
+        return $this->shipby;
+    }
+
+    public function setShipby(?ShipBy $shipby): self
+    {
+        $this->shipby = $shipby;
 
         return $this;
     }
