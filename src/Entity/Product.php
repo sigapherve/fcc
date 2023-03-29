@@ -1,0 +1,126 @@
+<?php
+
+namespace App\Entity;
+
+use App\Repository\ProductRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass=ProductRepository::class)
+ */
+class Product
+{
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $metalength;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $metawidth;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $metaheight;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $metaweight;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $qty;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(?string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getMetalength(): ?float
+    {
+        return $this->metalength;
+    }
+
+    public function setMetalength(?float $metalength): self
+    {
+        $this->metalength = $metalength;
+
+        return $this;
+    }
+
+    public function getMetawidth(): ?float
+    {
+        return $this->metawidth;
+    }
+
+    public function setMetawidth(?float $metawidth): self
+    {
+        $this->metawidth = $metawidth;
+
+        return $this;
+    }
+
+    public function getMetaheight(): ?float
+    {
+        return $this->metaheight;
+    }
+
+    public function setMetaheight(?float $metaheight): self
+    {
+        $this->metaheight = $metaheight;
+
+        return $this;
+    }
+
+    public function getMetaweight(): ?float
+    {
+        return $this->metaweight;
+    }
+
+    public function setMetaweight(?float $metaweight): self
+    {
+        $this->metaweight = $metaweight;
+
+        return $this;
+    }
+
+    public function getQty(): ?int
+    {
+        return $this->qty;
+    }
+
+    public function setQty(?int $qty): self
+    {
+        $this->qty = $qty;
+
+        return $this;
+    }
+}
