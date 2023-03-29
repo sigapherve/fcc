@@ -39,10 +39,24 @@ class PaymentPlace
      */
     private $rates;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Charge::class, mappedBy="PaymentPlace")
+     */
+    private $viewcharges;
+
+    /**
+     * @ORM\OneToMany(targetEntity=PayPolicy::class, mappedBy="PaymentPlace")
+     */
+    private $payPolicies;
+
+
     public function __construct()
     {
         $this->charges = new ArrayCollection();
         $this->rates = new ArrayCollection();
+       // $this->paymentPolicies = new ArrayCollection();
+       $this->viewcharges = new ArrayCollection();
+       $this->payPolicies = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -133,4 +147,66 @@ class PaymentPlace
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Charge>
+     */
+    public function getViewcharges(): Collection
+    {
+        return $this->viewcharges;
+    }
+
+    public function addViewcharge(Charge $viewcharge): self
+    {
+        if (!$this->viewcharges->contains($viewcharge)) {
+            $this->viewcharges[] = $viewcharge;
+            $viewcharge->setPaymentPlace($this);
+        }
+
+        return $this;
+    }
+
+    public function removeViewcharge(Charge $viewcharge): self
+    {
+        if ($this->viewcharges->removeElement($viewcharge)) {
+            // set the owning side to null (unless already changed)
+            if ($viewcharge->getPaymentPlace() === $this) {
+                $viewcharge->setPaymentPlace(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PayPolicy>
+     */
+    public function getPayPolicies(): Collection
+    {
+        return $this->payPolicies;
+    }
+
+    public function addPayPolicy(PayPolicy $payPolicy): self
+    {
+        if (!$this->payPolicies->contains($payPolicy)) {
+            $this->payPolicies[] = $payPolicy;
+            $payPolicy->setPaymentPlace($this);
+        }
+
+        return $this;
+    }
+
+    public function removePayPolicy(PayPolicy $payPolicy): self
+    {
+        if ($this->payPolicies->removeElement($payPolicy)) {
+            // set the owning side to null (unless already changed)
+            if ($payPolicy->getPaymentPlace() === $this) {
+                $payPolicy->setPaymentPlace(null);
+            }
+        }
+
+        return $this;
+    }
+
+    
 }

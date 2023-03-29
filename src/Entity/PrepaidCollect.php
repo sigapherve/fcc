@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\ChargeRepository;
+use App\Repository\PrepaidCollectRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=ChargeRepository::class)
+ * @ORM\Entity(repositoryClass=PrepaidCollectRepository::class)
  */
-class Charge
+class PrepaidCollect
 {
     /**
      * @ORM\Id
@@ -20,17 +20,17 @@ class Charge
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=PaymentPlace::class, inversedBy="viewcharges")
-     */
-    private $PaymentPlace;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=7, nullable=true)
      */
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity=PayPolicy::class, mappedBy="Charge")
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $description;
+
+    /**
+     * @ORM\OneToMany(targetEntity=PayPolicy::class, mappedBy="policy")
      */
     private $payPolicies;
 
@@ -44,18 +44,6 @@ class Charge
         return $this->id;
     }
 
-    public function getPaymentPlace(): ?PaymentPlace
-    {
-        return $this->PaymentPlace;
-    }
-
-    public function setPaymentPlace(?PaymentPlace $PaymentPlace): self
-    {
-        $this->PaymentPlace = $PaymentPlace;
-
-        return $this;
-    }
-
     public function getName(): ?string
     {
         return $this->name;
@@ -64,6 +52,18 @@ class Charge
     public function setName(?string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }
@@ -80,7 +80,7 @@ class Charge
     {
         if (!$this->payPolicies->contains($payPolicy)) {
             $this->payPolicies[] = $payPolicy;
-            $payPolicy->addCharge($this);
+            $payPolicy->setPolicy($this);
         }
 
         return $this;
@@ -89,7 +89,10 @@ class Charge
     public function removePayPolicy(PayPolicy $payPolicy): self
     {
         if ($this->payPolicies->removeElement($payPolicy)) {
-            $payPolicy->removeCharge($this);
+            // set the owning side to null (unless already changed)
+            if ($payPolicy->getPolicy() === $this) {
+                $payPolicy->setPolicy(null);
+            }
         }
 
         return $this;
