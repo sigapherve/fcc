@@ -34,9 +34,15 @@ class Customer
      */
     private $checkouts;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Cotation::class, mappedBy="Customer")
+     */
+    private $cotations;
+
     public function __construct()
     {
         $this->checkouts = new ArrayCollection();
+        $this->cotations = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -92,6 +98,36 @@ class Customer
             // set the owning side to null (unless already changed)
             if ($checkout->getCustomer() === $this) {
                 $checkout->setCustomer(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Cotation>
+     */
+    public function getCotations(): Collection
+    {
+        return $this->cotations;
+    }
+
+    public function addCotation(Cotation $cotation): self
+    {
+        if (!$this->cotations->contains($cotation)) {
+            $this->cotations[] = $cotation;
+            $cotation->setCustomer($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCotation(Cotation $cotation): self
+    {
+        if ($this->cotations->removeElement($cotation)) {
+            // set the owning side to null (unless already changed)
+            if ($cotation->getCustomer() === $this) {
+                $cotation->setCustomer(null);
             }
         }
 

@@ -34,6 +34,11 @@ class Cotation
      */
     private $reponses;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Customer::class, inversedBy="cotations")
+     */
+    private $Customer;
+
     public function __construct()
     {
         $this->reponses = new ArrayCollection();
@@ -94,6 +99,18 @@ class Cotation
                 $reponse->setCotation(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCustomer(): ?Customer
+    {
+        return $this->Customer;
+    }
+
+    public function setCustomer(?Customer $Customer): self
+    {
+        $this->Customer = $Customer;
 
         return $this;
     }
