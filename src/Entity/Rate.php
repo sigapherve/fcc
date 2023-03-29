@@ -42,6 +42,11 @@ class Rate
      */
     private $UnitFact;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=PaymentPlace::class, inversedBy="viewrates")
+     */
+    private $PaymentPlace;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Rate
     public function setUnitFact(?UnitFact $UnitFact): self
     {
         $this->UnitFact = $UnitFact;
+
+        return $this;
+    }
+
+    public function getPaymentPlace(): ?PaymentPlace
+    {
+        return $this->PaymentPlace;
+    }
+
+    public function setPaymentPlace(?PaymentPlace $PaymentPlace): self
+    {
+        $this->PaymentPlace = $PaymentPlace;
 
         return $this;
     }

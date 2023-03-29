@@ -44,6 +44,11 @@ class PaymentPlace
      */
     private $viewcharges;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Rate::class, mappedBy="PaymentPlace")
+     */
+    private $viewrates;
+
 
 
     public function __construct()
@@ -51,6 +56,7 @@ class PaymentPlace
         $this->charges = new ArrayCollection();
         $this->rates = new ArrayCollection();
        $this->viewcharges = new ArrayCollection();
+       $this->viewrates = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -166,6 +172,36 @@ class PaymentPlace
             // set the owning side to null (unless already changed)
             if ($viewcharge->getPaymentPlace() === $this) {
                 $viewcharge->setPaymentPlace(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Rate>
+     */
+    public function getViewrates(): Collection
+    {
+        return $this->viewrates;
+    }
+
+    public function addViewrate(Rate $viewrate): self
+    {
+        if (!$this->viewrates->contains($viewrate)) {
+            $this->viewrates[] = $viewrate;
+            $viewrate->setPaymentPlace($this);
+        }
+
+        return $this;
+    }
+
+    public function removeViewrate(Rate $viewrate): self
+    {
+        if ($this->viewrates->removeElement($viewrate)) {
+            // set the owning side to null (unless already changed)
+            if ($viewrate->getPaymentPlace() === $this) {
+                $viewrate->setPaymentPlace(null);
             }
         }
 
