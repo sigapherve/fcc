@@ -39,9 +39,15 @@ class Checkout
      */
     private $cotations;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Product::class, mappedBy="Checkout")
+     */
+    private $products;
+
     public function __construct()
     {
         $this->cotations = new ArrayCollection();
+        $this->products = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -109,6 +115,36 @@ class Checkout
             // set the owning side to null (unless already changed)
             if ($cotation->getCheckout() === $this) {
                 $cotation->setCheckout(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Product>
+     */
+    public function getProducts(): Collection
+    {
+        return $this->products;
+    }
+
+    public function addProduct(Product $product): self
+    {
+        if (!$this->products->contains($product)) {
+            $this->products[] = $product;
+            $product->setCheckout($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProduct(Product $product): self
+    {
+        if ($this->products->removeElement($product)) {
+            // set the owning side to null (unless already changed)
+            if ($product->getCheckout() === $this) {
+                $product->setCheckout(null);
             }
         }
 

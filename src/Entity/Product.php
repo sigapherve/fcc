@@ -59,6 +59,11 @@ class Product
      */
     private $constraints;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Checkout::class, inversedBy="products")
+     */
+    private $Checkout;
+
     public function __construct()
     {
         $this->invoicingMethods = new ArrayCollection();
@@ -195,6 +200,18 @@ class Product
         if ($this->constraints->removeElement($constraint)) {
             $constraint->removeProduct($this);
         }
+
+        return $this;
+    }
+
+    public function getCheckout(): ?Checkout
+    {
+        return $this->Checkout;
+    }
+
+    public function setCheckout(?Checkout $Checkout): self
+    {
+        $this->Checkout = $Checkout;
 
         return $this;
     }
