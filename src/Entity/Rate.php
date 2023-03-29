@@ -18,14 +18,14 @@ class Rate
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Country::class, inversedBy="Paymentplace")
+     * @ORM\ManyToOne(targetEntity=Country::class, inversedBy="Charge")
      */
     private $Country;
 
     /**
-     * @ORM\ManyToOne(targetEntity=PaymentPlace::class, inversedBy="rates")
+     * @ORM\ManyToOne(targetEntity=Charge::class, inversedBy="rates")
      */
-    private $Paymentplace;
+    private $Charge;
 
     /**
      * @ORM\Column(type="float", nullable=true)
@@ -59,14 +59,14 @@ class Rate
         return $this;
     }
 
-    public function getPaymentplace(): ?PaymentPlace
+    public function getCharge(): ?Charge
     {
-        return $this->Paymentplace;
+        return $this->Charge;
     }
 
-    public function setPaymentplace(?PaymentPlace $Paymentplace): self
+    public function setCharge(?Charge $Charge): self
     {
-        $this->Paymentplace = $Paymentplace;
+        $this->Charge = $Charge;
 
         return $this;
     }

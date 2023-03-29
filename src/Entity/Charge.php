@@ -20,11 +20,6 @@ class Charge
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=PaymentPlace::class, inversedBy="viewcharges")
-     */
-    private $PaymentPlace;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $name;
@@ -42,18 +37,6 @@ class Charge
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getPaymentPlace(): ?PaymentPlace
-    {
-        return $this->PaymentPlace;
-    }
-
-    public function setPaymentPlace(?PaymentPlace $PaymentPlace): self
-    {
-        $this->PaymentPlace = $PaymentPlace;
-
-        return $this;
     }
 
     public function getName(): ?string
