@@ -39,10 +39,16 @@ class Country
      */
     private $invoicingMethods;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Rate::class, mappedBy="Country")
+     */
+    private $Paymentplace;
+
     public function __construct()
     {
         $this->checkouts = new ArrayCollection();
         $this->invoicingMethods = new ArrayCollection();
+        $this->Paymentplace = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -128,6 +134,36 @@ class Country
             // set the owning side to null (unless already changed)
             if ($invoicingMethod->getCountry() === $this) {
                 $invoicingMethod->setCountry(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Rate>
+     */
+    public function getPaymentplace(): Collection
+    {
+        return $this->Paymentplace;
+    }
+
+    public function addPaymentplace(Rate $paymentplace): self
+    {
+        if (!$this->Paymentplace->contains($paymentplace)) {
+            $this->Paymentplace[] = $paymentplace;
+            $paymentplace->setCountry($this);
+        }
+
+        return $this;
+    }
+
+    public function removePaymentplace(Rate $paymentplace): self
+    {
+        if ($this->Paymentplace->removeElement($paymentplace)) {
+            // set the owning side to null (unless already changed)
+            if ($paymentplace->getCountry() === $this) {
+                $paymentplace->setCountry(null);
             }
         }
 
