@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CheckoutRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,16 @@ class Checkout
      * @ORM\ManyToOne(targetEntity=Country::class, inversedBy="checkouts")
      */
     private $shipto;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Cotation::class, mappedBy="Checkout")
+     */
+    private $cotations;
+
+    public function __construct()
+    {
+        $this->cotations = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -69,6 +81,36 @@ class Checkout
     public function setShipto(?Country $shipto): self
     {
         $this->shipto = $shipto;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Cotation>
+     */
+    public function getCotations(): Collection
+    {
+        return $this->cotations;
+    }
+
+    public function addCotation(Cotation $cotation): self
+    {
+        if (!$this->cotations->contains($cotation)) {
+            $this->cotations[] = $cotation;
+            $cotation->setCheckout($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCotation(Cotation $cotation): self
+    {
+        if ($this->cotations->removeElement($cotation)) {
+            // set the owning side to null (unless already changed)
+            if ($cotation->getCheckout() === $this) {
+                $cotation->setCheckout(null);
+            }
+        }
 
         return $this;
     }
