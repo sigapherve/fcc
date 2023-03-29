@@ -29,15 +29,6 @@ class PrepaidCollect
      */
     private $description;
 
-    /**
-     * @ORM\OneToMany(targetEntity=PayPolicy::class, mappedBy="policy")
-     */
-    private $payPolicies;
-
-    public function __construct()
-    {
-        $this->payPolicies = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -68,33 +59,4 @@ class PrepaidCollect
         return $this;
     }
 
-    /**
-     * @return Collection<int, PayPolicy>
-     */
-    public function getPayPolicies(): Collection
-    {
-        return $this->payPolicies;
-    }
-
-    public function addPayPolicy(PayPolicy $payPolicy): self
-    {
-        if (!$this->payPolicies->contains($payPolicy)) {
-            $this->payPolicies[] = $payPolicy;
-            $payPolicy->setPolicy($this);
-        }
-
-        return $this;
-    }
-
-    public function removePayPolicy(PayPolicy $payPolicy): self
-    {
-        if ($this->payPolicies->removeElement($payPolicy)) {
-            // set the owning side to null (unless already changed)
-            if ($payPolicy->getPolicy() === $this) {
-                $payPolicy->setPolicy(null);
-            }
-        }
-
-        return $this;
-    }
 }

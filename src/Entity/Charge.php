@@ -24,15 +24,6 @@ class Charge
      */
     private $name;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=PayPolicy::class, mappedBy="Charge")
-     */
-    private $payPolicies;
-
-    public function __construct()
-    {
-        $this->payPolicies = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -51,30 +42,5 @@ class Charge
         return $this;
     }
 
-    /**
-     * @return Collection<int, PayPolicy>
-     */
-    public function getPayPolicies(): Collection
-    {
-        return $this->payPolicies;
-    }
 
-    public function addPayPolicy(PayPolicy $payPolicy): self
-    {
-        if (!$this->payPolicies->contains($payPolicy)) {
-            $this->payPolicies[] = $payPolicy;
-            $payPolicy->addCharge($this);
-        }
-
-        return $this;
-    }
-
-    public function removePayPolicy(PayPolicy $payPolicy): self
-    {
-        if ($this->payPolicies->removeElement($payPolicy)) {
-            $payPolicy->removeCharge($this);
-        }
-
-        return $this;
-    }
 }
