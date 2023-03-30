@@ -44,6 +44,11 @@ class Checkout
      */
     private $products;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=ShipBy::class, inversedBy="checkouts")
+     */
+    private $shipby;
+
     public function __construct()
     {
         $this->cotations = new ArrayCollection();
@@ -147,6 +152,18 @@ class Checkout
                 $product->setCheckout(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getShipby(): ?ShipBy
+    {
+        return $this->shipby;
+    }
+
+    public function setShipby(?ShipBy $shipby): self
+    {
+        $this->shipby = $shipby;
 
         return $this;
     }
