@@ -60,7 +60,7 @@ class Product
     private $constraints;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Checkout::class, inversedBy="products")
+     * @ORM\ManyToOne(targetEntity=Checkout::class, inversedBy="product")
      */
     private $Checkout;
 
