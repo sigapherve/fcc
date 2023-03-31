@@ -29,9 +29,15 @@ class ShipBy
      */
     private $rates;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Checkout::class, mappedBy="shipby")
+     */
+    private $checkouts;
+
     public function __construct()
     {
         $this->rates = new ArrayCollection();
+        $this->checkouts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -75,6 +81,36 @@ class ShipBy
             // set the owning side to null (unless already changed)
             if ($rate->getShipby() === $this) {
                 $rate->setShipby(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Checkout>
+     */
+    public function getCheckouts(): Collection
+    {
+        return $this->checkouts;
+    }
+
+    public function addCheckout(Checkout $checkout): self
+    {
+        if (!$this->checkouts->contains($checkout)) {
+            $this->checkouts[] = $checkout;
+            $checkout->setShipby($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCheckout(Checkout $checkout): self
+    {
+        if ($this->checkouts->removeElement($checkout)) {
+            // set the owning side to null (unless already changed)
+            if ($checkout->getShipby() === $this) {
+                $checkout->setShipby(null);
             }
         }
 
