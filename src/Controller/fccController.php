@@ -23,7 +23,7 @@ class fccController extends AbstractController
     public function logic(EntityManagerInterface $em){
 
         //Importation de données du Json
-        $checkout = $em->getRepository(Checkout::Class)->findOneBy(['id'=>3]);
+        $checkout = $em->getRepository(Checkout::Class)->findOneBy(['id'=>4]);
         //dd($checkout);
 
 
@@ -67,6 +67,7 @@ class fccController extends AbstractController
                 $reponse->setMessage($rate->getCharge()->getName());
                 $reponse->setAmount($mesure * $rate->getAmount()); // PT =Mesure * prix Unitaire
                 $reponse->setAmountCurrency($rate->getPaymentPlace()->getCurrency()); //On capture la monnaie courante du Rate
+                $reponse->setPaymentplace($rate->getPaymentPlace()); // On capture le lieu de paiement de la charge
                 $em->persist($reponse);
                 $em->flush(); // On Stocke la reponse
             }
@@ -96,6 +97,7 @@ class fccController extends AbstractController
                 $reponse->setMessage($rate->getCharge()->getName());
                 $reponse->setAmount($mesure * $rate->getAmount()); // PT =Mesure * prix Unitaire
                 $reponse->setAmountCurrency($rate->getPaymentPlace()->getCurrency()); //On capture la monnaie courante du Rate
+                $reponse->setPaymentplace($rate->getPaymentPlace()); // On capture le lieu de paiement de la charge
                 $em->persist($reponse);
                 $em->flush(); // On Stocke la reponse
             }

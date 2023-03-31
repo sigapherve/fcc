@@ -10,14 +10,14 @@
 
 <div class="example-wrapper">
     <table> 
-    <tr><td colspan="3">Cotation pour 
-        {% for produit in produits %}
-            {{ produit.name }} ({{ produit.qty }})CTNS, &nbsp;
+    <tr><td colspan="3">Expedition par {{ shipby }}&nbsp; Cotation pour <br>
+        {% for produit in produits %} 
+            {{ produit.name }} {{ produit.qty }}CTNS, <br>
          {% endfor %}
         </td> 
       {% for reponse in reponses %}
         <tr>
-            <td>{{ reponse.message  }}</td><td>{{ reponse.amount|number_format(0, '.', ',') }}&nbsp;{{reponse.amountcurrency}}</td><td>Payable At :  {{ checkout.shipto.name }}</td>
+            <td>{{ reponse.message  }}</td><td>{{ reponse.amount|number_format(0, '.', ',') }}&nbsp;{{reponse.amountcurrency}}</td><td nowrap>Payable At :  {{ reponse.paymentplace.description }}</td>
         </tr>
     {% endfor %}
     </table>
