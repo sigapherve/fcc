@@ -1,0 +1,1486 @@
+{
+    "orders": [
+        {
+            "id": 5266151702847,
+            "admin_graphql_api_id": "gid://shopify/Order/5266151702847",
+            "app_id": 580111,
+            "browser_ip": "2.50.20.26",
+            "buyer_accepts_marketing": true,
+            "cancel_reason": null,
+            "cancelled_at": null,
+            "cart_token": "7ec845f6ac6902941ec2ca1e439a8deb",
+            "checkout_id": 36626305286463,
+            "checkout_token": "d82efca415657b060fe78a7ee569978a",
+            "client_details": {
+                "accept_language": "en-AE",
+                "browser_height": null,
+                "browser_ip": "2.50.20.26",
+                "browser_width": null,
+                "session_hash": null,
+                "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
+            },
+            "closed_at": null,
+            "confirmed": true,
+            "contact_email": "trustcorpsarl@gmail.com",
+            "created_at": "2023-03-20T14:38:10+04:00",
+            "currency": "AED",
+            "current_subtotal_price": "143.00",
+            "current_subtotal_price_set": {
+                "shop_money": {
+                    "amount": "143.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "143.00",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_discounts": "0.00",
+            "current_total_discounts_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_duties_set": null,
+            "current_total_price": "150.15",
+            "current_total_price_set": {
+                "shop_money": {
+                    "amount": "150.15",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "150.15",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_tax": "7.15",
+            "current_total_tax_set": {
+                "shop_money": {
+                    "amount": "7.15",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "7.15",
+                    "currency_code": "AED"
+                }
+            },
+            "customer_locale": "en-AE",
+            "device_id": null,
+            "discount_codes": [],
+            "email": "trustcorpsarl@gmail.com",
+            "estimated_taxes": false,
+            "financial_status": "pending",
+            "fulfillment_status": null,
+            "gateway": "Bank Deposit",
+            "landing_site": "/password",
+            "landing_site_ref": null,
+            "location_id": null,
+            "merchant_of_record_app_id": null,
+            "name": "#1007",
+            "note": null,
+            "note_attributes": [],
+            "number": 7,
+            "order_number": 1007,
+            "order_status_url": "https://fatrey.com/73269641535/orders/f42081b20e9a2bf11e2dd64b05a8c468/authenticate?key=834a3a4c9bc074bd04cd711f841ed507",
+            "original_total_duties_set": null,
+            "payment_gateway_names": [
+                "Bank Deposit"
+            ],
+            "phone": null,
+            "presentment_currency": "AED",
+            "processed_at": "2023-03-20T14:38:09+04:00",
+            "processing_method": "manual",
+            "reference": "e37519edb4ef086f7d9ef5bc1843b9e9",
+            "referring_site": "",
+            "source_identifier": "e37519edb4ef086f7d9ef5bc1843b9e9",
+            "source_name": "web",
+            "source_url": null,
+            "subtotal_price": "143.00",
+            "subtotal_price_set": {
+                "shop_money": {
+                    "amount": "143.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "143.00",
+                    "currency_code": "AED"
+                }
+            },
+            "tags": "",
+            "tax_lines": [
+                {
+                    "price": "7.15",
+                    "rate": 0.05,
+                    "title": "VAT",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "7.15",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "7.15",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "channel_liable": false
+                }
+            ],
+            "taxes_included": false,
+            "test": false,
+            "token": "f42081b20e9a2bf11e2dd64b05a8c468",
+            "total_discounts": "0.00",
+            "total_discounts_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_line_items_price": "143.00",
+            "total_line_items_price_set": {
+                "shop_money": {
+                    "amount": "143.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "143.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_outstanding": "150.15",
+            "total_price": "150.15",
+            "total_price_set": {
+                "shop_money": {
+                    "amount": "150.15",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "150.15",
+                    "currency_code": "AED"
+                }
+            },
+            "total_shipping_price_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_tax": "7.15",
+            "total_tax_set": {
+                "shop_money": {
+                    "amount": "7.15",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "7.15",
+                    "currency_code": "AED"
+                }
+            },
+            "total_tip_received": "0.00",
+            "total_weight": 640,
+            "updated_at": "2023-03-20T14:38:10+04:00",
+            "user_id": null,
+            "billing_address": {
+                "first_name": "ERIC",
+                "address1": "903 JUMA AL MAJID 500 BLDG",
+                "phone": "+237 6 99 50 95 82",
+                "city": "SHARJAH",
+                "zip": null,
+                "province": "Sharjah",
+                "country": "United Arab Emirates",
+                "last_name": "LIALE",
+                "address2": "903",
+                "company": null,
+                "latitude": null,
+                "longitude": null,
+                "name": "ERIC LIALE",
+                "country_code": "AE",
+                "province_code": "SH"
+            },
+            "customer": {
+                "id": 6853017731391,
+                "email": "trustcorpsarl@gmail.com",
+                "accepts_marketing": true,
+                "created_at": "2023-03-19T20:43:00+04:00",
+                "updated_at": "2023-03-20T14:38:10+04:00",
+                "first_name": "ERIC",
+                "last_name": "LIALE",
+                "state": "enabled",
+                "note": null,
+                "verified_email": false,
+                "multipass_identifier": null,
+                "tax_exempt": false,
+                "phone": null,
+                "email_marketing_consent": {
+                    "state": "subscribed",
+                    "opt_in_level": "single_opt_in",
+                    "consent_updated_at": "2023-03-20T14:38:10+04:00"
+                },
+                "sms_marketing_consent": null,
+                "tags": "",
+                "currency": "AED",
+                "accepts_marketing_updated_at": "2023-03-20T14:38:10+04:00",
+                "marketing_opt_in_level": "single_opt_in",
+                "tax_exemptions": [],
+                "admin_graphql_api_id": "gid://shopify/Customer/6853017731391",
+                "default_address": {
+                    "id": 9092144726335,
+                    "customer_id": 6853017731391,
+                    "first_name": "ERIC",
+                    "last_name": "LIALE",
+                    "company": null,
+                    "address1": "903 JUMA AL MAJID 500 BLDG",
+                    "address2": "903",
+                    "city": "SHARJAH",
+                    "province": "Sharjah",
+                    "country": "United Arab Emirates",
+                    "zip": null,
+                    "phone": "+237 6 99 50 95 82",
+                    "name": "ERIC LIALE",
+                    "province_code": "SH",
+                    "country_code": "AE",
+                    "country_name": "United Arab Emirates",
+                    "default": true
+                }
+            },
+            "discount_applications": [],
+            "fulfillments": [],
+            "line_items": [
+                {
+                    "id": 13758926389567,
+                    "admin_graphql_api_id": "gid://shopify/LineItem/13758926389567",
+                    "fulfillable_quantity": 2,
+                    "fulfillment_service": "manual",
+                    "fulfillment_status": null,
+                    "gift_card": false,
+                    "grams": 320,
+                    "name": "Lacoste L'Homme Eau de Toilette 100ml",
+                    "price": "71.50",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "71.50",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "71.50",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "product_exists": true,
+                    "product_id": 8255031378239,
+                    "properties": [],
+                    "quantity": 2,
+                    "requires_shipping": true,
+                    "sku": "PCS",
+                    "taxable": true,
+                    "title": "Lacoste L'Homme Eau de Toilette 100ml",
+                    "total_discount": "0.00",
+                    "total_discount_set": {
+                        "shop_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "variant_id": 44701511123263,
+                    "variant_inventory_management": "shopify",
+                    "variant_title": null,
+                    "vendor": "LCS SARL LLC",
+                    "tax_lines": [
+                        {
+                            "channel_liable": false,
+                            "price": "7.15",
+                            "price_set": {
+                                "shop_money": {
+                                    "amount": "7.15",
+                                    "currency_code": "AED"
+                                },
+                                "presentment_money": {
+                                    "amount": "7.15",
+                                    "currency_code": "AED"
+                                }
+                            },
+                            "rate": 0.05,
+                            "title": "VAT"
+                        }
+                    ],
+                    "duties": [],
+                    "discount_allocations": []
+                }
+            ],
+            "payment_terms": null,
+            "refunds": [],
+            "shipping_address": {
+                "first_name": "ERIC",
+                "address1": "903 JUMA AL MAJID 500 BLDG",
+                "phone": "+237 6 99 50 95 82",
+                "city": "SHARJAH",
+                "zip": null,
+                "province": "Sharjah",
+                "country": "United Arab Emirates",
+                "last_name": "LIALE",
+                "address2": "903",
+                "company": null,
+                "latitude": null,
+                "longitude": null,
+                "name": "ERIC LIALE",
+                "country_code": "AE",
+                "province_code": "SH"
+            },
+            "shipping_lines": [
+                {
+                    "id": 4307990610239,
+                    "carrier_identifier": "650f1a14fa979ec5c74d063e968411d4",
+                    "code": "Standard",
+                    "delivery_category": null,
+                    "discounted_price": "0.00",
+                    "discounted_price_set": {
+                        "shop_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "phone": null,
+                    "price": "0.00",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "requested_fulfillment_service_id": null,
+                    "source": "shopify",
+                    "title": "Standard",
+                    "tax_lines": [],
+                    "discount_allocations": []
+                }
+            ]
+        },
+        {
+            "id": 5265787420991,
+            "admin_graphql_api_id": "gid://shopify/Order/5265787420991",
+            "app_id": 580111,
+            "browser_ip": "94.206.204.217",
+            "buyer_accepts_marketing": false,
+            "cancel_reason": null,
+            "cancelled_at": null,
+            "cart_token": "db02501cac56e65acd552662a00f9878",
+            "checkout_id": 36625517052223,
+            "checkout_token": "d851cdbc9978719b66fb589dc5162bb7",
+            "client_details": {
+                "accept_language": "en-AE",
+                "browser_height": null,
+                "browser_ip": "94.206.204.217",
+                "browser_width": null,
+                "session_hash": null,
+                "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.44"
+            },
+            "closed_at": null,
+            "confirmed": true,
+            "contact_email": "trustcorpsarl@gmail.com",
+            "created_at": "2023-03-19T20:45:40+04:00",
+            "currency": "AED",
+            "current_subtotal_price": "29.00",
+            "current_subtotal_price_set": {
+                "shop_money": {
+                    "amount": "29.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "29.00",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_discounts": "0.00",
+            "current_total_discounts_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_duties_set": null,
+            "current_total_price": "103.45",
+            "current_total_price_set": {
+                "shop_money": {
+                    "amount": "103.45",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "103.45",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_tax": "1.45",
+            "current_total_tax_set": {
+                "shop_money": {
+                    "amount": "1.45",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "1.45",
+                    "currency_code": "AED"
+                }
+            },
+            "customer_locale": "en-AE",
+            "device_id": null,
+            "discount_codes": [],
+            "email": "trustcorpsarl@gmail.com",
+            "estimated_taxes": false,
+            "financial_status": "pending",
+            "fulfillment_status": null,
+            "gateway": "Cash on Delivery (COD)",
+            "landing_site": "/password",
+            "landing_site_ref": null,
+            "location_id": null,
+            "merchant_of_record_app_id": null,
+            "name": "#1004",
+            "note": null,
+            "note_attributes": [],
+            "number": 4,
+            "order_number": 1004,
+            "order_status_url": "https://fatrey.com/73269641535/orders/90085847ba569966b411cd6f6489731e/authenticate?key=30c58b4a0742555f69a2b981f99c7e98",
+            "original_total_duties_set": null,
+            "payment_gateway_names": [
+                "Cash on Delivery (COD)"
+            ],
+            "phone": null,
+            "presentment_currency": "AED",
+            "processed_at": "2023-03-19T20:45:39+04:00",
+            "processing_method": "manual",
+            "reference": "2ee744675f35e1df37c4cbdf076619de",
+            "referring_site": "",
+            "source_identifier": "2ee744675f35e1df37c4cbdf076619de",
+            "source_name": "web",
+            "source_url": null,
+            "subtotal_price": "29.00",
+            "subtotal_price_set": {
+                "shop_money": {
+                    "amount": "29.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "29.00",
+                    "currency_code": "AED"
+                }
+            },
+            "tags": "",
+            "tax_lines": [
+                {
+                    "price": "1.45",
+                    "rate": 0.05,
+                    "title": "VAT",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "1.45",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "1.45",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "channel_liable": false
+                }
+            ],
+            "taxes_included": false,
+            "test": false,
+            "token": "90085847ba569966b411cd6f6489731e",
+            "total_discounts": "0.00",
+            "total_discounts_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_line_items_price": "29.00",
+            "total_line_items_price_set": {
+                "shop_money": {
+                    "amount": "29.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "29.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_outstanding": "103.45",
+            "total_price": "103.45",
+            "total_price_set": {
+                "shop_money": {
+                    "amount": "103.45",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "103.45",
+                    "currency_code": "AED"
+                }
+            },
+            "total_shipping_price_set": {
+                "shop_money": {
+                    "amount": "73.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "73.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_tax": "1.45",
+            "total_tax_set": {
+                "shop_money": {
+                    "amount": "1.45",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "1.45",
+                    "currency_code": "AED"
+                }
+            },
+            "total_tip_received": "0.00",
+            "total_weight": 300,
+            "updated_at": "2023-03-19T20:45:40+04:00",
+            "user_id": null,
+            "billing_address": {
+                "first_name": "ERIC",
+                "address1": "903 JUMA AL MAJID 500 BLDG",
+                "phone": null,
+                "city": "SHARJAH",
+                "zip": null,
+                "province": "Sharjah",
+                "country": "United Arab Emirates",
+                "last_name": "LIALE",
+                "address2": "903",
+                "company": null,
+                "latitude": null,
+                "longitude": null,
+                "name": "ERIC LIALE",
+                "country_code": "AE",
+                "province_code": "SH"
+            },
+            "customer": {
+                "id": 6853017731391,
+                "email": "trustcorpsarl@gmail.com",
+                "accepts_marketing": true,
+                "created_at": "2023-03-19T20:43:00+04:00",
+                "updated_at": "2023-03-20T14:38:10+04:00",
+                "first_name": "ERIC",
+                "last_name": "LIALE",
+                "state": "enabled",
+                "note": null,
+                "verified_email": false,
+                "multipass_identifier": null,
+                "tax_exempt": false,
+                "phone": null,
+                "email_marketing_consent": {
+                    "state": "subscribed",
+                    "opt_in_level": "single_opt_in",
+                    "consent_updated_at": "2023-03-20T14:38:10+04:00"
+                },
+                "sms_marketing_consent": null,
+                "tags": "",
+                "currency": "AED",
+                "accepts_marketing_updated_at": "2023-03-20T14:38:10+04:00",
+                "marketing_opt_in_level": "single_opt_in",
+                "tax_exemptions": [],
+                "admin_graphql_api_id": "gid://shopify/Customer/6853017731391",
+                "default_address": {
+                    "id": 9092144726335,
+                    "customer_id": 6853017731391,
+                    "first_name": "ERIC",
+                    "last_name": "LIALE",
+                    "company": null,
+                    "address1": "903 JUMA AL MAJID 500 BLDG",
+                    "address2": "903",
+                    "city": "SHARJAH",
+                    "province": "Sharjah",
+                    "country": "United Arab Emirates",
+                    "zip": null,
+                    "phone": "+237 6 99 50 95 82",
+                    "name": "ERIC LIALE",
+                    "province_code": "SH",
+                    "country_code": "AE",
+                    "country_name": "United Arab Emirates",
+                    "default": true
+                }
+            },
+            "discount_applications": [],
+            "fulfillments": [],
+            "line_items": [
+                {
+                    "id": 13758326735167,
+                    "admin_graphql_api_id": "gid://shopify/LineItem/13758326735167",
+                    "fulfillable_quantity": 1,
+                    "fulfillment_service": "manual",
+                    "fulfillment_status": null,
+                    "gift_card": false,
+                    "grams": 300,
+                    "name": "210 smart collection 100ml For Women",
+                    "price": "29.00",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "29.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "29.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "product_exists": true,
+                    "product_id": 8255003361599,
+                    "properties": [],
+                    "quantity": 1,
+                    "requires_shipping": true,
+                    "sku": "PCS",
+                    "taxable": true,
+                    "title": "210 smart collection 100ml For Women",
+                    "total_discount": "0.00",
+                    "total_discount_set": {
+                        "shop_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "variant_id": 44701396959551,
+                    "variant_inventory_management": "shopify",
+                    "variant_title": null,
+                    "vendor": "LCS SARL LLC",
+                    "tax_lines": [
+                        {
+                            "channel_liable": false,
+                            "price": "1.45",
+                            "price_set": {
+                                "shop_money": {
+                                    "amount": "1.45",
+                                    "currency_code": "AED"
+                                },
+                                "presentment_money": {
+                                    "amount": "1.45",
+                                    "currency_code": "AED"
+                                }
+                            },
+                            "rate": 0.05,
+                            "title": "VAT"
+                        }
+                    ],
+                    "duties": [],
+                    "discount_allocations": []
+                }
+            ],
+            "payment_terms": null,
+            "refunds": [],
+            "shipping_address": {
+                "first_name": "ERIC",
+                "address1": "903 JUMA AL MAJID 500 BLDG",
+                "phone": null,
+                "city": "SHARJAH",
+                "zip": null,
+                "province": "Sharjah",
+                "country": "United Arab Emirates",
+                "last_name": "LIALE",
+                "address2": "903",
+                "company": null,
+                "latitude": null,
+                "longitude": null,
+                "name": "ERIC LIALE",
+                "country_code": "AE",
+                "province_code": "SH"
+            },
+            "shipping_lines": [
+                {
+                    "id": 4307716538687,
+                    "carrier_identifier": "650f1a14fa979ec5c74d063e968411d4",
+                    "code": "Standard",
+                    "delivery_category": null,
+                    "discounted_price": "73.00",
+                    "discounted_price_set": {
+                        "shop_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "phone": null,
+                    "price": "73.00",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "requested_fulfillment_service_id": null,
+                    "source": "shopify",
+                    "title": "Standard",
+                    "tax_lines": [],
+                    "discount_allocations": []
+                }
+            ]
+        },
+        {
+            "id": 5265656119615,
+            "admin_graphql_api_id": "gid://shopify/Order/5265656119615",
+            "app_id": 580111,
+            "browser_ip": "94.206.204.217",
+            "buyer_accepts_marketing": false,
+            "cancel_reason": null,
+            "cancelled_at": null,
+            "cart_token": "2632d0e7f626b0133faede27cd9b94eb",
+            "checkout_id": 36625247535423,
+            "checkout_token": "3b96eb5d88e4ca0ef098ac48ec2a58d3",
+            "client_details": {
+                "accept_language": "en-AE",
+                "browser_height": null,
+                "browser_ip": "94.206.204.217",
+                "browser_width": null,
+                "session_hash": null,
+                "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.44"
+            },
+            "closed_at": null,
+            "confirmed": true,
+            "contact_email": "ibrahimabbastradingllc@gmail.com",
+            "created_at": "2023-03-19T15:42:07+04:00",
+            "currency": "AED",
+            "current_subtotal_price": "245.24",
+            "current_subtotal_price_set": {
+                "shop_money": {
+                    "amount": "245.24",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "245.24",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_discounts": "0.00",
+            "current_total_discounts_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_duties_set": null,
+            "current_total_price": "318.24",
+            "current_total_price_set": {
+                "shop_money": {
+                    "amount": "318.24",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "318.24",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_tax": "0.00",
+            "current_total_tax_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "customer_locale": "en-AE",
+            "device_id": null,
+            "discount_codes": [],
+            "email": "ibrahimabbastradingllc@gmail.com",
+            "estimated_taxes": false,
+            "financial_status": "pending",
+            "fulfillment_status": null,
+            "gateway": "Cash on Delivery (COD)",
+            "landing_site": "/password",
+            "landing_site_ref": null,
+            "location_id": null,
+            "merchant_of_record_app_id": null,
+            "name": "#1003",
+            "note": null,
+            "note_attributes": [],
+            "number": 3,
+            "order_number": 1003,
+            "order_status_url": "https://fatrey.com/73269641535/orders/b27d411adea86b7dacca319744e43035/authenticate?key=e2225754bbedbb57e016eb205fad1f4d",
+            "original_total_duties_set": null,
+            "payment_gateway_names": [
+                "Cash on Delivery (COD)"
+            ],
+            "phone": null,
+            "presentment_currency": "AED",
+            "processed_at": "2023-03-19T15:42:03+04:00",
+            "processing_method": "manual",
+            "reference": "9defe47bca013c692d639c5b7da8ea2a",
+            "referring_site": "",
+            "source_identifier": "9defe47bca013c692d639c5b7da8ea2a",
+            "source_name": "web",
+            "source_url": null,
+            "subtotal_price": "245.24",
+            "subtotal_price_set": {
+                "shop_money": {
+                    "amount": "245.24",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "245.24",
+                    "currency_code": "AED"
+                }
+            },
+            "tags": "",
+            "tax_lines": [],
+            "taxes_included": false,
+            "test": false,
+            "token": "b27d411adea86b7dacca319744e43035",
+            "total_discounts": "0.00",
+            "total_discounts_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_line_items_price": "245.24",
+            "total_line_items_price_set": {
+                "shop_money": {
+                    "amount": "245.24",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "245.24",
+                    "currency_code": "AED"
+                }
+            },
+            "total_outstanding": "318.24",
+            "total_price": "318.24",
+            "total_price_set": {
+                "shop_money": {
+                    "amount": "318.24",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "318.24",
+                    "currency_code": "AED"
+                }
+            },
+            "total_shipping_price_set": {
+                "shop_money": {
+                    "amount": "73.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "73.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_tax": "0.00",
+            "total_tax_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_tip_received": "0.00",
+            "total_weight": 0,
+            "updated_at": "2023-03-19T15:42:07+04:00",
+            "user_id": null,
+            "billing_address": {
+                "first_name": "ROGER",
+                "address1": "903 JUMA AL MAJID 500 BLDG",
+                "phone": null,
+                "city": "Al Nahda",
+                "zip": null,
+                "province": "Dubai",
+                "country": "United Arab Emirates",
+                "last_name": "HERVE",
+                "address2": "903",
+                "company": null,
+                "latitude": null,
+                "longitude": null,
+                "name": "ROGER HERVE",
+                "country_code": "AE",
+                "province_code": "DU"
+            },
+            "customer": {
+                "id": 6852726587711,
+                "email": "ibrahimabbastradingllc@gmail.com",
+                "accepts_marketing": true,
+                "created_at": "2023-03-19T10:58:45+04:00",
+                "updated_at": "2023-03-19T15:42:07+04:00",
+                "first_name": "ROGER",
+                "last_name": "HERVE",
+                "state": "disabled",
+                "note": null,
+                "verified_email": true,
+                "multipass_identifier": null,
+                "tax_exempt": false,
+                "phone": null,
+                "email_marketing_consent": {
+                    "state": "subscribed",
+                    "opt_in_level": "single_opt_in",
+                    "consent_updated_at": "2023-03-19T10:58:46+04:00"
+                },
+                "sms_marketing_consent": null,
+                "tags": "",
+                "currency": "AED",
+                "accepts_marketing_updated_at": "2023-03-19T10:58:46+04:00",
+                "marketing_opt_in_level": "single_opt_in",
+                "tax_exemptions": [],
+                "admin_graphql_api_id": "gid://shopify/Customer/6852726587711",
+                "default_address": {
+                    "id": 9091256942911,
+                    "customer_id": 6852726587711,
+                    "first_name": "ROGER",
+                    "last_name": "HERVE",
+                    "company": null,
+                    "address1": "903 JUMA AL MAJID 500 BLDG",
+                    "address2": "903",
+                    "city": "AL NAHDA",
+                    "province": "Dubai",
+                    "country": "United Arab Emirates",
+                    "zip": null,
+                    "phone": null,
+                    "name": "ROGER HERVE",
+                    "province_code": "DU",
+                    "country_code": "AE",
+                    "country_name": "United Arab Emirates",
+                    "default": true
+                }
+            },
+            "discount_applications": [],
+            "fulfillments": [],
+            "line_items": [
+                {
+                    "id": 13758112792895,
+                    "admin_graphql_api_id": "gid://shopify/LineItem/13758112792895",
+                    "fulfillable_quantity": 1,
+                    "fulfillment_service": "dsers-fulfillment-service",
+                    "fulfillment_status": null,
+                    "gift_card": false,
+                    "grams": 0,
+                    "name": "Nordic Center Side Table Living Room Modern Cute Luxury - Ornament",
+                    "price": "245.24",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "245.24",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "245.24",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "product_exists": true,
+                    "product_id": 8259415998783,
+                    "properties": [],
+                    "quantity": 1,
+                    "requires_shipping": true,
+                    "sku": "14:200004889#Ornament",
+                    "taxable": false,
+                    "title": "Nordic Center Side Table Living Room Modern Cute Luxury",
+                    "total_discount": "0.00",
+                    "total_discount_set": {
+                        "shop_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "variant_id": 44716372066623,
+                    "variant_inventory_management": "shopify",
+                    "variant_title": "Ornament",
+                    "vendor": "fatrey",
+                    "tax_lines": [],
+                    "duties": [],
+                    "discount_allocations": []
+                }
+            ],
+            "payment_terms": null,
+            "refunds": [],
+            "shipping_address": {
+                "first_name": "ROGER",
+                "address1": "903 JUMA AL MAJID 500 BLDG",
+                "phone": null,
+                "city": "Al Nahda",
+                "zip": null,
+                "province": "Dubai",
+                "country": "United Arab Emirates",
+                "last_name": "HERVE",
+                "address2": "903",
+                "company": null,
+                "latitude": null,
+                "longitude": null,
+                "name": "ROGER HERVE",
+                "country_code": "AE",
+                "province_code": "DU"
+            },
+            "shipping_lines": [
+                {
+                    "id": 4307612860735,
+                    "carrier_identifier": "650f1a14fa979ec5c74d063e968411d4",
+                    "code": "Standard",
+                    "delivery_category": null,
+                    "discounted_price": "73.00",
+                    "discounted_price_set": {
+                        "shop_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "phone": null,
+                    "price": "73.00",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "requested_fulfillment_service_id": null,
+                    "source": "shopify",
+                    "title": "Standard",
+                    "tax_lines": [],
+                    "discount_allocations": []
+                }
+            ]
+        },
+        {
+            "id": 5265644028223,
+            "admin_graphql_api_id": "gid://shopify/Order/5265644028223",
+            "app_id": 580111,
+            "browser_ip": "94.206.204.217",
+            "buyer_accepts_marketing": false,
+            "cancel_reason": null,
+            "cancelled_at": null,
+            "cart_token": "f8728d3f7fb452106c36950abbe59bc8",
+            "checkout_id": 36625222664511,
+            "checkout_token": "b6f9038f781f0cb58c94e115f4082577",
+            "client_details": {
+                "accept_language": "en-AE",
+                "browser_height": null,
+                "browser_ip": "94.206.204.217",
+                "browser_width": null,
+                "session_hash": null,
+                "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
+            },
+            "closed_at": null,
+            "confirmed": true,
+            "contact_email": "mboutchouanglise@gmail.com",
+            "created_at": "2023-03-19T15:04:07+04:00",
+            "currency": "AED",
+            "current_subtotal_price": "525.00",
+            "current_subtotal_price_set": {
+                "shop_money": {
+                    "amount": "525.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "525.00",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_discounts": "0.00",
+            "current_total_discounts_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_duties_set": null,
+            "current_total_price": "624.25",
+            "current_total_price_set": {
+                "shop_money": {
+                    "amount": "624.25",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "624.25",
+                    "currency_code": "AED"
+                }
+            },
+            "current_total_tax": "26.25",
+            "current_total_tax_set": {
+                "shop_money": {
+                    "amount": "26.25",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "26.25",
+                    "currency_code": "AED"
+                }
+            },
+            "customer_locale": "en-AE",
+            "device_id": null,
+            "discount_codes": [],
+            "email": "mboutchouanglise@gmail.com",
+            "estimated_taxes": false,
+            "financial_status": "paid",
+            "fulfillment_status": null,
+            "gateway": "Cash on Delivery (COD)",
+            "landing_site": "/password",
+            "landing_site_ref": null,
+            "location_id": null,
+            "merchant_of_record_app_id": null,
+            "name": "#1002",
+            "note": null,
+            "note_attributes": [],
+            "number": 2,
+            "order_number": 1002,
+            "order_status_url": "https://fatrey.com/73269641535/orders/7e748f92d77f15d0f04af7c394c57398/authenticate?key=2aaee24000255bdbc575f4a87e838627",
+            "original_total_duties_set": null,
+            "payment_gateway_names": [
+                "Cash on Delivery (COD)"
+            ],
+            "phone": null,
+            "presentment_currency": "AED",
+            "processed_at": "2023-03-19T15:04:06+04:00",
+            "processing_method": "manual",
+            "reference": "bbda57bbba8072b7cb8965baaa488874",
+            "referring_site": "",
+            "source_identifier": "bbda57bbba8072b7cb8965baaa488874",
+            "source_name": "web",
+            "source_url": null,
+            "subtotal_price": "525.00",
+            "subtotal_price_set": {
+                "shop_money": {
+                    "amount": "525.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "525.00",
+                    "currency_code": "AED"
+                }
+            },
+            "tags": "",
+            "tax_lines": [
+                {
+                    "price": "26.25",
+                    "rate": 0.05,
+                    "title": "VAT",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "26.25",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "26.25",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "channel_liable": false
+                }
+            ],
+            "taxes_included": false,
+            "test": false,
+            "token": "7e748f92d77f15d0f04af7c394c57398",
+            "total_discounts": "0.00",
+            "total_discounts_set": {
+                "shop_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "0.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_line_items_price": "525.00",
+            "total_line_items_price_set": {
+                "shop_money": {
+                    "amount": "525.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "525.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_outstanding": "0.00",
+            "total_price": "624.25",
+            "total_price_set": {
+                "shop_money": {
+                    "amount": "624.25",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "624.25",
+                    "currency_code": "AED"
+                }
+            },
+            "total_shipping_price_set": {
+                "shop_money": {
+                    "amount": "73.00",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "73.00",
+                    "currency_code": "AED"
+                }
+            },
+            "total_tax": "26.25",
+            "total_tax_set": {
+                "shop_money": {
+                    "amount": "26.25",
+                    "currency_code": "AED"
+                },
+                "presentment_money": {
+                    "amount": "26.25",
+                    "currency_code": "AED"
+                }
+            },
+            "total_tip_received": "0.00",
+            "total_weight": 3750,
+            "updated_at": "2023-03-19T15:06:20+04:00",
+            "user_id": null,
+            "billing_address": {
+                "first_name": "Mboutchouang",
+                "address1": "juma majib 500",
+                "phone": null,
+                "city": "sharjah, al nadha",
+                "zip": null,
+                "province": "Sharjah",
+                "country": "United Arab Emirates",
+                "last_name": "Lise",
+                "address2": "903",
+                "company": null,
+                "latitude": null,
+                "longitude": null,
+                "name": "Mboutchouang Lise",
+                "country_code": "AE",
+                "province_code": "SH"
+            },
+            "customer": {
+                "id": 6852827087167,
+                "email": "mboutchouanglise@gmail.com",
+                "accepts_marketing": false,
+                "created_at": "2023-03-19T15:04:06+04:00",
+                "updated_at": "2023-03-19T15:04:08+04:00",
+                "first_name": "Mboutchouang",
+                "last_name": "Lise",
+                "state": "disabled",
+                "note": null,
+                "verified_email": true,
+                "multipass_identifier": null,
+                "tax_exempt": false,
+                "phone": null,
+                "email_marketing_consent": {
+                    "state": "not_subscribed",
+                    "opt_in_level": "single_opt_in",
+                    "consent_updated_at": null
+                },
+                "sms_marketing_consent": null,
+                "tags": "",
+                "currency": "AED",
+                "accepts_marketing_updated_at": "2023-03-19T15:04:06+04:00",
+                "marketing_opt_in_level": null,
+                "tax_exemptions": [],
+                "admin_graphql_api_id": "gid://shopify/Customer/6852827087167",
+                "default_address": {
+                    "id": 9091355345215,
+                    "customer_id": 6852827087167,
+                    "first_name": "Mboutchouang",
+                    "last_name": "Lise",
+                    "company": null,
+                    "address1": "juma majib 500",
+                    "address2": "903",
+                    "city": "sharjah, al nadha",
+                    "province": "Sharjah",
+                    "country": "United Arab Emirates",
+                    "zip": null,
+                    "phone": null,
+                    "name": "Mboutchouang Lise",
+                    "province_code": "SH",
+                    "country_code": "AE",
+                    "country_name": "United Arab Emirates",
+                    "default": true
+                }
+            },
+            "discount_applications": [],
+            "fulfillments": [],
+            "line_items": [
+                {
+                    "id": 13758092837183,
+                    "admin_graphql_api_id": "gid://shopify/LineItem/13758092837183",
+                    "fulfillable_quantity": 15,
+                    "fulfillment_service": "manual",
+                    "fulfillment_status": null,
+                    "gift_card": false,
+                    "grams": 250,
+                    "name": "64 smart collection 100ml For Women",
+                    "price": "35.00",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "35.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "35.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "product_exists": true,
+                    "product_id": 8255023055167,
+                    "properties": [],
+                    "quantity": 15,
+                    "requires_shipping": true,
+                    "sku": "PCS",
+                    "taxable": true,
+                    "title": "64 smart collection 100ml For Women",
+                    "total_discount": "0.00",
+                    "total_discount_set": {
+                        "shop_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "0.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "variant_id": 44701498999103,
+                    "variant_inventory_management": "shopify",
+                    "variant_title": null,
+                    "vendor": "LCS SARL LLC",
+                    "tax_lines": [
+                        {
+                            "channel_liable": false,
+                            "price": "26.25",
+                            "price_set": {
+                                "shop_money": {
+                                    "amount": "26.25",
+                                    "currency_code": "AED"
+                                },
+                                "presentment_money": {
+                                    "amount": "26.25",
+                                    "currency_code": "AED"
+                                }
+                            },
+                            "rate": 0.05,
+                            "title": "VAT"
+                        }
+                    ],
+                    "duties": [],
+                    "discount_allocations": []
+                }
+            ],
+            "payment_terms": null,
+            "refunds": [],
+            "shipping_address": {
+                "first_name": "Mboutchouang",
+                "address1": "juma majib 500",
+                "phone": null,
+                "city": "sharjah, al nadha",
+                "zip": null,
+                "province": "Sharjah",
+                "country": "United Arab Emirates",
+                "last_name": "Lise",
+                "address2": "903",
+                "company": null,
+                "latitude": null,
+                "longitude": null,
+                "name": "Mboutchouang Lise",
+                "country_code": "AE",
+                "province_code": "SH"
+            },
+            "shipping_lines": [
+                {
+                    "id": 4307602637119,
+                    "carrier_identifier": "650f1a14fa979ec5c74d063e968411d4",
+                    "code": "Standard",
+                    "delivery_category": null,
+                    "discounted_price": "73.00",
+                    "discounted_price_set": {
+                        "shop_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "phone": null,
+                    "price": "73.00",
+                    "price_set": {
+                        "shop_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        },
+                        "presentment_money": {
+                            "amount": "73.00",
+                            "currency_code": "AED"
+                        }
+                    },
+                    "requested_fulfillment_service_id": null,
+                    "source": "shopify",
+                    "title": "Standard",
+                    "tax_lines": [],
+                    "discount_allocations": []
+                }
+            ]
+        }
+    ]
+}

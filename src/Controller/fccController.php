@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class EssaiJsonController extends AbstractController
+class fccController extends AbstractController
 {
     /**
      * @Route("/quote", name="app_quote")
@@ -23,7 +23,7 @@ class EssaiJsonController extends AbstractController
     public function logic(EntityManagerInterface $em){
 
         //Importation de données du Json
-        $checkout = $em->getRepository(Checkout::Class)->findOneBy(['id'=>1]);
+        $checkout = $em->getRepository(Checkout::Class)->findOneBy(['id'=>3]);
         //dd($checkout);
 
 
@@ -70,7 +70,7 @@ class EssaiJsonController extends AbstractController
                 $em->persist($reponse);
                 $em->flush(); // On Stocke la reponse
             }
-            dd($cotation);
+           // dd($cotation);
         }
         //Si Expedition par mer AIR = 1
         if ($checkout->getShipby()->getId()==1) {
@@ -99,9 +99,15 @@ class EssaiJsonController extends AbstractController
                 $em->persist($reponse);
                 $em->flush(); // On Stocke la reponse
             }
-            dd($cotation);
+           // dd($cotation);
         }
 
+        return $this->render('quote/index.html.twig', [
+            'reponses' => $em->getRepository(Reponse::class)->findBy(["Cotation"=>$cotation]),
+            'produits'=> $em->getRepository(Product::class)->findBy(["Checkout"=>$checkout]),
+            'shipby' => $checkout->getShipby()->getName(),
+            'checkout' => $checkout
+        ]);
 
     }
 
