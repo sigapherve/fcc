@@ -37,6 +37,11 @@ class Reponse
      */
     private $AmountCurrency;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=PaymentPlace::class, inversedBy="reponses")
+     */
+    private $paymentplace;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Reponse
     public function setAmountCurrency(?string $AmountCurrency): self
     {
         $this->AmountCurrency = $AmountCurrency;
+
+        return $this;
+    }
+
+    public function getPaymentplace(): ?PaymentPlace
+    {
+        return $this->paymentplace;
+    }
+
+    public function setPaymentplace(?PaymentPlace $paymentplace): self
+    {
+        $this->paymentplace = $paymentplace;
 
         return $this;
     }
